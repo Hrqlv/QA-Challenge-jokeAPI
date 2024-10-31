@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "api": "npx playwright test"
+    "cenarios": "npx playwright test",
+    "cenario1": "npx playwright test --grep \"@CENARIO1\"",
+    "cenario2": "npx playwright test --grep \"@CENARIO2\"",
+    "cenario3": "npx playwright test --grep \"@CENARIO3\""
   },
   "repository": {
     "type": "git",

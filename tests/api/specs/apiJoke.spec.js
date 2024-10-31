@@ -1,57 +1,48 @@
 const { test, expect } = require('@playwright/test');
 const JokeApiPage = require('../services/servicesAPI'); 
-const { isUnique } = require('../../../suporte/helpers');
+const { idsUnico, coletarIdsUnicos, medirPerformanceRequisicoes, buscarPiadaComRepeticao } = require('../../../suporte/helpers');
 
 
 test.describe('[Objetivo do Teste] Garantir que a API de piadas retorne dados corretos, no formato esperado e que funcione de maneira eficiente', () => {
-  
-  test('[Cenario 1] Verificar o formato e conteúdo da resposta', async () => {
-    const response = await JokeApiPage.buscarPiadaComRepeticao()
-    expect(response.status()).toBe(200);
-    const data = await response.json();
 
-    expect(data).toHaveProperty("type");
-    expect(data).toHaveProperty("setup");
-    expect(data).toHaveProperty("punchline");
-    expect(data).toHaveProperty("id");
-    expect(typeof data.id).toBe('number');
-    expect(typeof data.setup).toBe('string');
-    expect(typeof data.punchline).toBe('string');
+// CENÁRIO DE TESTE 1
 
-    console.log(data);
+  test('[Cenario 1] Verificar o formato e conteúdo da resposta em 100 requisições @CENARIO1', async () => {
+    await test.step('[Casos de teste 1] Fazer 100 requisições e verificar formato e campos', async () => {
+        const response = await buscarPiadaComRepeticao(JokeApiPage, 100);
+        expect(response.status()).toBe(200);
+        
+        const data = await response.json();
+        expect(data).toHaveProperty("type");
+        expect(data).toHaveProperty("setup");
+        expect(data).toHaveProperty("punchline");
+        expect(data).toHaveProperty("id");
+
+        expect(typeof data.id).toBe('number');
+        expect(typeof data.setup).toBe('string');
+        expect(typeof data.punchline).toBe('string');
+
+        expect(data.type).not.toBe('');
+        expect(data.setup).not.toBe('');
+        expect(data.punchline).not.toBe('');
+        console.log(data);
+    });
   });
 
-  test('[Cenario 2] Verificar unicidade dos IDs em 100 requisições', async () => {
-    const ids = [];
-  
-    for (let i = 0; i < 100; i++) {
-      const response = await JokeApiPage.buscarPiadaComRepeticao()
-      const data = await response.json();
-      ids.push(data.id);
-  
-      await new Promise(resolve => setTimeout(resolve, 300));
-    }
-  
-    expect(isUnique(ids)).toBe(true);
+// CENÁRIO DE TESTE 2
+
+  test('[Cenario 2] Verificar unicidade dos IDs em 100 requisições @CENARIO2', async () => {
+    await test.step('[Casos de teste 1]  Coletar IDs de 100 requisições e verificar unicidade', async () => {
+      const ids = await coletarIdsUnicos(JokeApiPage, 100);
+      expect(idsUnico(ids)).toBe(true);
+    });
   });
-  
-  test('[Cenario 3] Teste de carga com 10 requisições simultâneas', async () => {
-    const numDeRequisicoes = 10;
 
-    const inicio = performance.now();
+// CENÁRIO DE TESTE 3
 
-    const responses = await Promise.all(Array.from({ length: numDeRequisicoes }, async () => {
-      const response = await JokeApiPage.solicitacaoPiadas(); 
-      return response;
-    }));
-
-    const fim = performance.now();
-    const duracao = fim - inicio;
-
-    for (const response of responses) {
-      expect(response.status()).toBe(200);
-    }
-
-    console.log(`Tempo total para ${numDeRequisicoes} requisições: ${duracao.toFixed(2)} ms`);
+  test('[Cenario 3] Teste de carga com 10 usuários fazendo requisições simultâneas @CENARIO3', async () => {
+    await test.step('[Casos de teste 1] Fazer 10 requisições simultâneas para medir performance', async () => {
+      await medirPerformanceRequisicoes(JokeApiPage, 10);
+    });
   });
 });

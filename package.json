@@ -1,0 +1,27 @@
+{
+  "name": "qa-challenge-jokeapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "api": "npx playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hrqlv/QA-Challenge-jokeAPI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hrqlv/QA-Challenge-jokeAPI/issues"
+  },
+  "homepage": "https://github.com/Hrqlv/QA-Challenge-jokeAPI#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.48.2",
+    "@types/node": "^22.8.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}

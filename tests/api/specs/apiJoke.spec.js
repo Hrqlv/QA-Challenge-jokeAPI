@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 const  JokeApiPage  = require('../services/servicesAPI'); 
-const { idsUnico, coletarIdsUnicos, medirPerformanceRequisicoes, buscarPiadaComRepeticao } = require('../../../suporte/helpers');
+const { idsUnico, coletarIdsUnicos, medirPerformanceRequisicoes, buscarPiadaComRepeticao } = require('../../../helpers/helpers');
 
 
 test.describe('[Objetivo do Teste] Garantir que a API de piadas retorne dados corretos, no formato esperado e que funcione de maneira eficiente', () => {

@@ -2,14 +2,12 @@ const { expect } = require('@playwright/test');
 
 
 // Verifica unicidade de IDs
-
 function idsUnico(ids) {
   const uniqueIds = new Set(ids);
   return uniqueIds.size === ids.length;
 }
 
 // Coleta IDs únicos com limite de requisições simultâneas
-
 async function coletarIdsUnicos(apiInstance, numRequisicoes = 100) {
   const ids = new Set();
   
@@ -22,7 +20,6 @@ async function coletarIdsUnicos(apiInstance, numRequisicoes = 100) {
               const data = await response.json();
               
               // Verifica se o ID já foi coletado
-
               if (!ids.has(data.id)) {
                   ids.add(data.id);
                   console.log(`ID coletado #${i}: ${data.id}`);
@@ -48,7 +45,6 @@ async function coletarIdsUnicos(apiInstance, numRequisicoes = 100) {
 }
 
 // Mede performance de requisições
-
 async function medirPerformanceRequisicoes(apiInstance, numDeRequisicoes = 10) {
   const inicio = performance.now();
   const responses = await Promise.all(Array.from({ length: numDeRequisicoes }, () => apiInstance.obterPiadas()));
@@ -57,7 +53,6 @@ async function medirPerformanceRequisicoes(apiInstance, numDeRequisicoes = 10) {
 }
 
 // Busca piadas com repetição
-
 async function buscarPiadaComRepeticao(apiInstance, maximoTentativas = 20) {
   for (let tentativas = 1; tentativas <= maximoTentativas; tentativas++) {
     const response = await apiInstance.obterPiadas();

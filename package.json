@@ -7,7 +7,8 @@
     "cenarios": "npx playwright test",
     "cenario1": "npx playwright test --grep \"@CENARIO1\"",
     "cenario2": "npx playwright test --grep \"@CENARIO2\"",
-    "cenario3": "npx playwright test --grep \"@CENARIO3\""
+    "cenario3": "npx playwright test --grep \"@CENARIO3\"",
+    "cenario4": "npx playwright test --grep \"@CENARIO4\""
   },
   "repository": {
     "type": "git",

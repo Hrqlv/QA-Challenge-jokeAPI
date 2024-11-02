@@ -6,6 +6,9 @@ Garantir que a API de piadas retorne dados corretos, no formato esperado e que f
 ### Endpoint: 
 https://official-joke-api.appspot.com/random_joke
 
+## Ferramentas utilizadas:
+Framework Playwright
+Postman
 
 ## O que foi feito
 ## Principais Aspectos a Serem Verificados:
@@ -59,6 +62,5 @@ npm run cenario4
 
 ### Documento do Plano de Testes (CT’s), relatório dos resultados esperado, bugs encontrados e possíveis melhorias e riscos
 https://henriquelopesvelozo.atlassian.net/wiki/x/AYACAg
-
 
 Espero que voces gostem do projeto que fiz, foi de acordo com os meus conhecimentos e habilidades. Fique a vontade!

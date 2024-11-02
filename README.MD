@@ -11,7 +11,7 @@ https://official-joke-api.appspot.com/random_joke
 Framework Playwright, Postman, JavaScript
 
 ## O que foi feito
-## Principais Aspectos a Serem Verificados:
+## Principais aspectos a serem verificados:
 
 #### Formato da Resposta: 
 A resposta deve estar no formato JSON e conter os campos esperados.

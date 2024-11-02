@@ -8,47 +8,53 @@ https://official-joke-api.appspot.com/random_joke
 
 
 ## O que foi feito
-# Principais Aspectos a Serem Verificados:
-Formato da Resposta: A resposta deve estar no formato JSON e conter os campos esperados.
+## Principais Aspectos a Serem Verificados:
 
-Tipos de Dados: Validar os tipos de dados dos campos retornados.
+#### Formato da Resposta: 
+A resposta deve estar no formato JSON e conter os campos esperados.
 
-Unicidade dos IDs: Verificar se os IDs das piadas são únicos a cada chamada.
+#### Tipos de Dados: 
+Validar os tipos de dados dos campos retornados.
 
-Performance: Verificar o tempo de resposta da API.
+#### Unicidade dos IDs: 
+Verificar se os IDs das piadas são únicos a cada chamada.
 
-Limites: Testar limites de chamadas à API.
+#### Performance: 
+Verificar o tempo de resposta da API.
 
-## Cenários de testes realizados
-# Cenário 1:
+#### Limites: 
+Testar limites de chamadas à API.
+
+# Cenários de testes realizados
+### Cenário 1:
 Verificar o formato e conteúdo da resposta em até 100 requisições
 
-# Cenário 2:
+### Cenário 2:
 Verificar unicidade dos IDs em até 100 requisições
 
-# Cenário 3:
+### Cenário 3:
 Teste de carga com 10 usuários fazendo requisições simultâneas
 
-# Cenário 4:
+### Cenário 4:
 Teste de Limites, chamadas excessivas
 
-## Instalar as dependias
+## Instalar as dependencias
 npm install / npm i
 
-## Como rodar os tests
-# Todos os cenarios:
+# Como rodar os tests
+## Todos os cenarios:
 npm run cenarios
 
-# Cenario 1:
+### Cenario 1:
 npm run cenario1
 
-# Cenario 2:
+### Cenario 2:
 npm run cenario2
 
-# Cenario 3:
+### Cenario 3:
 npm run cenario3
 
-# Cenario 4:
+### Cenario 4:
 npm run cenario4
 
 ## Documento do Plano de Testes (CT’s), relatório dos resultados esperado, bugs encontrados e possíveis melhorias e riscos

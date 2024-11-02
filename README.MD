@@ -6,7 +6,7 @@ Garantir que a API de piadas retorne dados corretos, no formato esperado e que f
 ### Endpoint: 
 https://official-joke-api.appspot.com/random_joke
 
-## Ferramentas utilizadas:
+## Ferramentas, frameworks e linguagens utilizadas:
 
 ### Framework Playwright
 ### Postman

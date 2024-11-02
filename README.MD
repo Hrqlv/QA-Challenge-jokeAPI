@@ -8,9 +8,9 @@ https://official-joke-api.appspot.com/random_joke
 
 ## Ferramentas, frameworks e linguagens utilizadas:
 
-### Framework Playwright
-### Postman
-### JavaScript
+Framework Playwright
+Postman
+JavaScript
 
 ## O que foi feito
 ## Principais Aspectos a Serem Verificados:

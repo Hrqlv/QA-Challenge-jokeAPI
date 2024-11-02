@@ -25,7 +25,7 @@ Verificar o tempo de resposta da API.
 #### Limites: 
 Testar limites de chamadas à API.
 
-# Cenários de testes realizados
+## Cenários de testes realizados
 ### Cenário 1:
 Verificar o formato e conteúdo da resposta em até 100 requisições
 
@@ -41,8 +41,8 @@ Teste de Limites, chamadas excessivas
 ## Instalar as dependencias
 npm install / npm i
 
-# Como rodar os tests
-## Todos os cenarios:
+## Como rodar os tests
+### Todos os cenarios:
 npm run cenarios
 
 ### Cenario 1:

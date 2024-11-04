@@ -60,7 +60,7 @@ npm run cenario3
 ### Cenario 4:
 npm run cenario4
 
-## Mostrar o show-report (relatório dos resultados do tests executado)
+### Mostrar o show-report (relatório dos resultados do tests executado)
 npx playwright show-report
 
 ### Documento do Plano de Testes (CT’s), relatório dos resultados esperado, bugs encontrados e possíveis melhorias e riscos

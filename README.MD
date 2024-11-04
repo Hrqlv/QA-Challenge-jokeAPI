@@ -8,7 +8,7 @@ https://official-joke-api.appspot.com/random_joke
 
 ## Ferramentas, frameworks e linguagens utilizadas:
 
-Framework Playwright, Postman, JavaScript
+Framework Playwright, Postman e JavaScript.
 
 ## O que foi feito
 ## Principais aspectos a serem verificados:
@@ -30,16 +30,16 @@ Testar limites de chamadas à API.
 
 ## Cenários de testes realizados
 ### Cenário 1:
-Verificar o formato e conteúdo da resposta em até 100 requisições
+Verificar o formato e conteúdo da resposta em até 100 requisições.
 
 ### Cenário 2:
-Verificar unicidade dos IDs em até 100 requisições
+Verificar unicidade dos IDs em até 100 requisições.
 
 ### Cenário 3:
-Teste de carga com 10 usuários fazendo requisições simultâneas
+Teste de carga com 10 usuários fazendo requisições simultâneas.
 
 ### Cenário 4:
-Teste de Limites, chamadas excessivas
+Teste de Limites, chamadas excessivas.
 
 ## Instalar as dependencias
 npm install / npm i
@@ -59,6 +59,9 @@ npm run cenario3
 
 ### Cenario 4:
 npm run cenario4
+
+## Mostrar o show-report (relatório dos resultados do tests executado)
+npx playwright show-report
 
 ### Documento do Plano de Testes (CT’s), relatório dos resultados esperado, bugs encontrados e possíveis melhorias e riscos
 https://henriquelopesvelozo.atlassian.net/wiki/x/AYACAg
